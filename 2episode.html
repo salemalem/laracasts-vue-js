@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2 EPISODE</title>
+	<script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+
+	<div id="root">
+		<input type="text" id="input" v-model="message">
+		<p>{{ message }}</p>
+	</div>
+
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#root',
+			data:{ 
+				message: 'Hello world'
+			}
+		})
+
+
+	</script>
+</body>
+</html>

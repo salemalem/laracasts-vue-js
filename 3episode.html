@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3 EPISODE</title>
+	<script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+
+	<div id="root">
+		<ol>
+			<li v-for="name of names">{{ name }}</li>
+			<!-- <li v-for="name in names">{{ name }}</li> -->
+			<!-- <li v-for="name in names" v-text="name"></li> -->
+		</ol>
+
+		<input id="input" type="text">
+		<button id="button">Add Name</button>
+
+	</div>
+
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#root',
+			data:{ 
+				names: ['Joe', 'Mary', 'Jane', 'Jack']
+			},
+
+			mounted(){
+				// alert("ready");
+				document.querySelector('#button').addEventListener('click', ()=>{
+					let name = document.querySelector('#input');
+					app.names.push(name.value); 
+					name.value = '';
+				});
+			}
+		});
+
+
+		
+
+	</script>
+</body>
+</html>
